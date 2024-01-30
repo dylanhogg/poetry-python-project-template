@@ -55,7 +55,7 @@ jobs:
       - name: Run style check - black
         run: |
           source .venv/bin/activate
-          black llmgraph tests --check --verbose
+          black your_project_name tests --check --verbose
 
       - name: Run linter - ruff
         run: |

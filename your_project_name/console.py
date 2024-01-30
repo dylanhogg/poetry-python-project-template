@@ -63,11 +63,11 @@ def run(
         print(example_usage)
         print(f"[bold red]{str(ex)}[/bold red]")
         print("")
-        print("For more information, try 'llmgraph --help'.")
+        print(f"For more information, try '{consts.package_name} --help'.")
         raise typer.Exit(code=1) from ex
-    # except Exception as ex:
-    #     print(example_usage)
-    #     print(f"[bold red]Unexpected exception: {str(ex)}[/bold red]")
-    #     print("")
-    #     print("For more information, try 'llmgraph --help'.")
-    #     raise typer.Exit(code=100) from ex
+    except Exception as ex:
+        print(example_usage)
+        print(f"[bold red]Unexpected exception: {str(ex)}[/bold red]")
+        print("")
+        print(f"For more information, try '{consts.package_name} --help'.")
+        raise typer.Exit(code=100) from ex
