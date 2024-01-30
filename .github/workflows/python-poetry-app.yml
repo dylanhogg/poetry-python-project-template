@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo and setup Python
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up python
         id: setup-python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: "3.10"
 
       - name: Load cached Poetry installation, if exists
         id: cached-poetry
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.local # the path depends on the OS
           key: poetry-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-2 # increment to reset cache, e.g. if you see .venv/bin/activate: No such file or directory
@@ -40,7 +40,7 @@ jobs:
 
       - name: Load cached venv, if exists
         id: cached-poetry-dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}-1
