@@ -29,7 +29,7 @@ loguru = "^0.7.2"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 black = "^24.1.1"
-ruff = "^0.1.15"
+ruff = "^0.2.0"
 coverage = "^7.4.1"
 pre-commit = "^3.6.0"
 pip-audit = "^2.7.0"
@@ -42,6 +42,11 @@ target-version = ['py39']
 your_project_name = 'your_project_name.console:typer_app'
 
 [tool.ruff]
+line-length = 120
+extend-exclude = [".joblib_cache"]
+target-version = "py39"
+
+[tool.ruff.lint]
 # https://docs.astral.sh/ruff/rules/
 select = [
     "E",   # pycodestyle errors
@@ -56,8 +61,5 @@ ignore = [
     "E501", # line too long, handled by black
     "D203", # 1 blank line required before class docstring
 ]
-line-length = 120
-extend-exclude = [".joblib_cache"]
 fixable = ["ALL"]
 unfixable = []
-target-version = "py39"
