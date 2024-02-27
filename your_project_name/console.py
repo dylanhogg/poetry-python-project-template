@@ -23,7 +23,7 @@ def version_callback(value: bool):
 @typer_app.command()
 def run(
     required_arg: Annotated[str, typer.Argument(help="Required argument")],
-    optional_arg: Annotated[str, typer.Option(help="Optional argument")] = None,
+    optional_arg: Annotated[str, typer.Option(help="Optional argument")] = "",
     version: Annotated[
         Optional[bool],
         typer.Option("--version", help=f"Display {consts.package_name} version", callback=version_callback),
@@ -33,9 +33,10 @@ def run(
     Command entry point
     """
 
+    example_usage = f"Example usage: [bold green]{consts.package_name}[/bold green]"
+
     try:
         log.configure()
-        example_usage = f"Example usage: [bold green]{consts.package_name}[/bold green]"
 
         logger.info(f"Start {consts.package_name}, required_arg = {required_arg}, optional_arg = {optional_arg}")
         logger.info(f"PYTHONPATH = {env.get('PYTHONPATH', 'Not set')}")
