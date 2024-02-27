@@ -22,7 +22,7 @@ poetry-add-init:
 	# Adds required packages to your pyproject.toml and installs them
 	# TODO: review and add your dependencies as needed
 	# NOTE: to bump all dependency versions in pyproject.toml, see: https://github.com/MousaZeidBaker/poetry-plugin-up
-	poetry add --group dev pytest black ruff coverage pre-commit pip-audit
+	poetry add --group dev pytest black ruff coverage pre-commit pip-audit pyright
 	poetry add python-dotenv click typer rich tqdm loguru
 
 publish-test:
