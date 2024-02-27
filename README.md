@@ -15,7 +15,7 @@ A quick-start [Poetry](https://python-poetry.org/) Python project template with 
 1. [Poetry](https://python-poetry.org/) for dependency management
 1. Useful functionality wrapped in a `Makefile`
 1. Helpful default packages (details below)
-1. A GitHub build action
+1. A GitHub CI build action using poetry that runs linting, type checking and unit tests
 1. Example app showing logging and CLI arg parsing
 
 ## Application libraries included in template
@@ -31,8 +31,9 @@ A quick-start [Poetry](https://python-poetry.org/) Python project template with 
 1. [pytest](https://github.com/pytest-dev/pytest) for writing your tests
 2. [Black](https://github.com/psf/black) for code formatting
 3. [Ruff](https://github.com/astral-sh/ruff) for fast linting and formatting
-4. [coverage](https://github.com/nedbat/coveragepy) for code coverage
-5. [pre-commit](https://github.com/pre-commit/pre-commit) for pre-commit hooks
-6. [pip-audit](https://github.com/pypa/pip-audit) for checking for security vulnerabilities
+4. [pyright](https://github.com/microsoft/pyright) for static type checking
+5. [coverage](https://github.com/nedbat/coveragepy) for code coverage
+6. [pre-commit](https://github.com/pre-commit/pre-commit) for pre-commit hooks (black, ruff and pyright)
+7. [pip-audit](https://github.com/pypa/pip-audit) for checking for security vulnerabilities
 
 Happy templating!
