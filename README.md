@@ -1,7 +1,16 @@
 # Poetry Python Project Template
 
+![Static Badge](https://img.shields.io/badge/mission-A_useful_Python_poetry_template-blue)
+
 [![Latest Tag](https://img.shields.io/github/v/tag/dylanhogg/poetry-python-project-template)](https://github.com/dylanhogg/poetry-python-project-template/tags)
 [![Build](https://github.com/dylanhogg/poetry-python-project-template/workflows/build/badge.svg)](https://github.com/dylanhogg/poetry-python-project-template/actions/workflows/python-poetry-app.yml)
+[![PyPI](https://badge.fury.io/py/poetry-python-project-template.svg)](https://badge.fury.io/py/poetry-python-project-template)
+
+![Top language](https://img.shields.io/github/languages/top/dylanhogg/poetry-python-project-template)
+![Last commit](https://img.shields.io/github/last-commit/dylanhogg/poetry-python-project-template)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dylanhogg/poetry-python-project-template/blob/master/notebooks/notebook.ipynb)
 
 A quick-start [Poetry](https://python-poetry.org/) Python project template with helpful functionality and common libraries.
 
