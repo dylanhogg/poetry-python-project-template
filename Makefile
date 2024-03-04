@@ -76,6 +76,10 @@ pyright:
 pre-commit:
 	poetry run pre-commit run --all-files
 
+pre-commit-install:
+	# One time: Install git hook to run pre-commit automatically on git commit
+	poetry run pre-commit install
+
 pip-audit:
 	poetry run pip-audit
 
